@@ -27,7 +27,9 @@
 		7BF94C3D294FBC440022C944 /* InstallationSelectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD91294F774500B2C10E /* InstallationSelectionContainer.swift */; };
 		7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */; };
 		7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */; };
+		7BF94C45294FC1B40022C944 /* AlfredPathResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C44294FC1B40022C944 /* AlfredPathResolverTests.swift */; };
 		7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */; };
+		7BF94C4B294FC6000022C944 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C4A294FC6000022C944 /* FileManagerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +69,9 @@
 		7BF94C34294FB0C60022C944 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolvingMock.swift; sourceTree = "<group>"; };
+		7BF94C44294FC1B40022C944 /* AlfredPathResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolverTests.swift; sourceTree = "<group>"; };
 		7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionContainerTests.swift; sourceTree = "<group>"; };
+		7BF94C4A294FC6000022C944 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 		7BF94C37294FBBBC0022C944 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7BF94C42294FC19F0022C944 /* Filesystem */,
 				7BF94C38294FBBC30022C944 /* InstallationSelection */,
 			);
 			path = Features;
@@ -248,6 +253,23 @@
 				7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */,
 			);
 			path = InstallationSelection;
+			sourceTree = "<group>";
+		};
+		7BF94C42294FC19F0022C944 /* Filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C43294FC1A50022C944 /* Alfred */,
+			);
+			path = Filesystem;
+			sourceTree = "<group>";
+		};
+		7BF94C43294FC1A50022C944 /* Alfred */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C44294FC1B40022C944 /* AlfredPathResolverTests.swift */,
+				7BF94C4A294FC6000022C944 /* FileManagerMock.swift */,
+			);
+			path = Alfred;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF94C45294FC1B40022C944 /* AlfredPathResolverTests.swift in Sources */,
 				7BAFAD6F294F727D00B2C10E /* alfred_managerTests.swift in Sources */,
 				7BF94C3D294FBC440022C944 /* InstallationSelectionContainer.swift in Sources */,
 				7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */,
@@ -409,6 +432,7 @@
 				7BF94C3C294FBBE50022C944 /* ViewModel.swift in Sources */,
 				7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */,
 				7BF94C3A294FBBD90022C944 /* InstallationSelectionViewModelTests.swift in Sources */,
+				7BF94C4B294FC6000022C944 /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
