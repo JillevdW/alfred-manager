@@ -27,6 +27,7 @@
 		7BF94C3D294FBC440022C944 /* InstallationSelectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD91294F774500B2C10E /* InstallationSelectionContainer.swift */; };
 		7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */; };
 		7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */; };
+		7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		7BF94C34294FB0C60022C944 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolvingMock.swift; sourceTree = "<group>"; };
+		7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionContainerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */,
 				7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */,
+				7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */,
 			);
 			path = InstallationSelection;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */,
 				7BF94C3B294FBBDE0022C944 /* InstallationSelectionViewModel.swift in Sources */,
 				7BF94C3C294FBBE50022C944 /* ViewModel.swift in Sources */,
+				7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */,
 				7BF94C3A294FBBD90022C944 /* InstallationSelectionViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
