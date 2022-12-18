@@ -14,6 +14,7 @@
 		7BAFAD6F294F727D00B2C10E /* alfred_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD6E294F727D00B2C10E /* alfred_managerTests.swift */; };
 		7BAFAD79294F727D00B2C10E /* alfred_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */; };
 		7BAFAD7B294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */; };
+		7BAFAD89294F753B00B2C10E /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFAD88294F753B00B2C10E /* Factory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAFAD89294F753B00B2C10E /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = "alfred-manager";
+			packageProductDependencies = (
+				7BAFAD88294F753B00B2C10E /* Factory */,
+			);
 			productName = "alfred-manager";
 			productReference = 7BAFAD59294F727C00B2C10E /* alfred-manager.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 7BAFAD50294F727C00B2C10E;
+			packageReferences = (
+				7BAFAD87294F753B00B2C10E /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = 7BAFAD5A294F727C00B2C10E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -576,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BAFAD87294F753B00B2C10E /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BAFAD88294F753B00B2C10E /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BAFAD87294F753B00B2C10E /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BAFAD51294F727C00B2C10E /* Project object */;
 }
