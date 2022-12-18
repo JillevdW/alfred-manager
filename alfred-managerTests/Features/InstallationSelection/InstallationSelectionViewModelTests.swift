@@ -11,6 +11,12 @@ final class InstallationSelectionViewModelTests: XCTestCase {
 
     override class func setUp() {
         super.setUp()
+        InstallationSelectionContainer.Registrations.push()
+    }
+    
+    override class func tearDown() {
+        super.tearDown()
+        InstallationSelectionContainer.Registrations.pop()
     }
 
     func test_onCreate_withURLs_publishesDoneState() {

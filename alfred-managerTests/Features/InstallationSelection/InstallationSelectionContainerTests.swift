@@ -8,6 +8,16 @@
 import XCTest
 
 final class InstallationSelectionContainerTests: XCTestCase {
+    
+    override class func setUp() {
+        super.setUp()
+        InstallationSelectionContainer.Registrations.push()
+    }
+    
+    override class func tearDown() {
+        super.tearDown()
+        InstallationSelectionContainer.Registrations.pop()
+    }
 
     func test_alfredPathResolver_usesInjectedFileManager() throws {
         let fileManager = FileManager()
