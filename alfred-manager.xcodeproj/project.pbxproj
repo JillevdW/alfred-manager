@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD5C294F727C00B2C10E /* alfred_managerApp.swift */; };
+		7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD5E294F727C00B2C10E /* ContentView.swift */; };
+		7BAFAD61294F727D00B2C10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFAD60294F727D00B2C10E /* Assets.xcassets */; };
+		7BAFAD64294F727D00B2C10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFAD63294F727D00B2C10E /* Preview Assets.xcassets */; };
+		7BAFAD6F294F727D00B2C10E /* alfred_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD6E294F727D00B2C10E /* alfred_managerTests.swift */; };
+		7BAFAD79294F727D00B2C10E /* alfred_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */; };
+		7BAFAD7B294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BAFAD6B294F727D00B2C10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BAFAD51294F727C00B2C10E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BAFAD58294F727C00B2C10E;
+			remoteInfo = "alfred-manager";
+		};
+		7BAFAD75294F727D00B2C10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BAFAD51294F727C00B2C10E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BAFAD58294F727C00B2C10E;
+			remoteInfo = "alfred-manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7BAFAD59294F727C00B2C10E /* alfred-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alfred-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAFAD5C294F727C00B2C10E /* alfred_managerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerApp.swift; sourceTree = "<group>"; };
+		7BAFAD5E294F727C00B2C10E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7BAFAD60294F727D00B2C10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BAFAD63294F727D00B2C10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7BAFAD65294F727D00B2C10E /* alfred_manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = alfred_manager.entitlements; sourceTree = "<group>"; };
+		7BAFAD6A294F727D00B2C10E /* alfred-managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alfred-managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAFAD6E294F727D00B2C10E /* alfred_managerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerTests.swift; sourceTree = "<group>"; };
+		7BAFAD74294F727D00B2C10E /* alfred-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alfred-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITests.swift; sourceTree = "<group>"; };
+		7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BAFAD56294F727C00B2C10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD67294F727D00B2C10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD71294F727D00B2C10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BAFAD50294F727C00B2C10E = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD5B294F727C00B2C10E /* alfred-manager */,
+				7BAFAD6D294F727D00B2C10E /* alfred-managerTests */,
+				7BAFAD77294F727D00B2C10E /* alfred-managerUITests */,
+				7BAFAD5A294F727C00B2C10E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BAFAD5A294F727C00B2C10E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD59294F727C00B2C10E /* alfred-manager.app */,
+				7BAFAD6A294F727D00B2C10E /* alfred-managerTests.xctest */,
+				7BAFAD74294F727D00B2C10E /* alfred-managerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BAFAD5B294F727C00B2C10E /* alfred-manager */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD5C294F727C00B2C10E /* alfred_managerApp.swift */,
+				7BAFAD5E294F727C00B2C10E /* ContentView.swift */,
+				7BAFAD60294F727D00B2C10E /* Assets.xcassets */,
+				7BAFAD65294F727D00B2C10E /* alfred_manager.entitlements */,
+				7BAFAD62294F727D00B2C10E /* Preview Content */,
+			);
+			path = "alfred-manager";
+			sourceTree = "<group>";
+		};
+		7BAFAD62294F727D00B2C10E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD63294F727D00B2C10E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7BAFAD6D294F727D00B2C10E /* alfred-managerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD6E294F727D00B2C10E /* alfred_managerTests.swift */,
+			);
+			path = "alfred-managerTests";
+			sourceTree = "<group>";
+		};
+		7BAFAD77294F727D00B2C10E /* alfred-managerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */,
+				7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */,
+			);
+			path = "alfred-managerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BAFAD58294F727C00B2C10E /* alfred-manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BAFAD7E294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-manager" */;
+			buildPhases = (
+				7BAFAD55294F727C00B2C10E /* Sources */,
+				7BAFAD56294F727C00B2C10E /* Frameworks */,
+				7BAFAD57294F727C00B2C10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "alfred-manager";
+			productName = "alfred-manager";
+			productReference = 7BAFAD59294F727C00B2C10E /* alfred-manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BAFAD69294F727D00B2C10E /* alfred-managerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BAFAD81294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-managerTests" */;
+			buildPhases = (
+				7BAFAD66294F727D00B2C10E /* Sources */,
+				7BAFAD67294F727D00B2C10E /* Frameworks */,
+				7BAFAD68294F727D00B2C10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BAFAD6C294F727D00B2C10E /* PBXTargetDependency */,
+			);
+			name = "alfred-managerTests";
+			productName = "alfred-managerTests";
+			productReference = 7BAFAD6A294F727D00B2C10E /* alfred-managerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BAFAD73294F727D00B2C10E /* alfred-managerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BAFAD84294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-managerUITests" */;
+			buildPhases = (
+				7BAFAD70294F727D00B2C10E /* Sources */,
+				7BAFAD71294F727D00B2C10E /* Frameworks */,
+				7BAFAD72294F727D00B2C10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BAFAD76294F727D00B2C10E /* PBXTargetDependency */,
+			);
+			name = "alfred-managerUITests";
+			productName = "alfred-managerUITests";
+			productReference = 7BAFAD74294F727D00B2C10E /* alfred-managerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BAFAD51294F727C00B2C10E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					7BAFAD58294F727C00B2C10E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					7BAFAD69294F727D00B2C10E = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 7BAFAD58294F727C00B2C10E;
+					};
+					7BAFAD73294F727D00B2C10E = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 7BAFAD58294F727C00B2C10E;
+					};
+				};
+			};
+			buildConfigurationList = 7BAFAD54294F727C00B2C10E /* Build configuration list for PBXProject "alfred-manager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BAFAD50294F727C00B2C10E;
+			productRefGroup = 7BAFAD5A294F727C00B2C10E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BAFAD58294F727C00B2C10E /* alfred-manager */,
+				7BAFAD69294F727D00B2C10E /* alfred-managerTests */,
+				7BAFAD73294F727D00B2C10E /* alfred-managerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BAFAD57294F727C00B2C10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFAD64294F727D00B2C10E /* Preview Assets.xcassets in Resources */,
+				7BAFAD61294F727D00B2C10E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD68294F727D00B2C10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD72294F727D00B2C10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BAFAD55294F727C00B2C10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
+				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD66294F727D00B2C10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFAD6F294F727D00B2C10E /* alfred_managerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BAFAD70294F727D00B2C10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFAD7B294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift in Sources */,
+				7BAFAD79294F727D00B2C10E /* alfred_managerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BAFAD6C294F727D00B2C10E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BAFAD58294F727C00B2C10E /* alfred-manager */;
+			targetProxy = 7BAFAD6B294F727D00B2C10E /* PBXContainerItemProxy */;
+		};
+		7BAFAD76294F727D00B2C10E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BAFAD58294F727C00B2C10E /* alfred-manager */;
+			targetProxy = 7BAFAD75294F727D00B2C10E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7BAFAD7C294F727D00B2C10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BAFAD7D294F727D00B2C10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7BAFAD7F294F727D00B2C10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "alfred-manager/alfred_manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7BAFAD80294F727D00B2C10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "alfred-manager/alfred_manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7BAFAD82294F727D00B2C10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alfred-manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/alfred-manager";
+			};
+			name = Debug;
+		};
+		7BAFAD83294F727D00B2C10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alfred-manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/alfred-manager";
+			};
+			name = Release;
+		};
+		7BAFAD85294F727D00B2C10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "alfred-manager";
+			};
+			name = Debug;
+		};
+		7BAFAD86294F727D00B2C10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "alfred-manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BAFAD54294F727C00B2C10E /* Build configuration list for PBXProject "alfred-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BAFAD7C294F727D00B2C10E /* Debug */,
+				7BAFAD7D294F727D00B2C10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BAFAD7E294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BAFAD7F294F727D00B2C10E /* Debug */,
+				7BAFAD80294F727D00B2C10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BAFAD81294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-managerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BAFAD82294F727D00B2C10E /* Debug */,
+				7BAFAD83294F727D00B2C10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BAFAD84294F727D00B2C10E /* Build configuration list for PBXNativeTarget "alfred-managerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BAFAD85294F727D00B2C10E /* Debug */,
+				7BAFAD86294F727D00B2C10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BAFAD51294F727C00B2C10E /* Project object */;
+}
