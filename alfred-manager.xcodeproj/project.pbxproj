@@ -15,6 +15,7 @@
 		7BAFAD79294F727D00B2C10E /* alfred_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */; };
 		7BAFAD7B294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */; };
 		7BAFAD89294F753B00B2C10E /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFAD88294F753B00B2C10E /* Factory */; };
+		7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7BAFAD74294F727D00B2C10E /* alfred-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alfred-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITests.swift; sourceTree = "<group>"; };
 		7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 		7BAFAD5B294F727C00B2C10E /* alfred-manager */ = {
 			isa = PBXGroup;
 			children = (
+				7BAFAD97294F7C8500B2C10E /* Core */,
+				7BAFAD8A294F76BF00B2C10E /* Features */,
 				7BAFAD5C294F727C00B2C10E /* alfred_managerApp.swift */,
 				7BAFAD5E294F727C00B2C10E /* ContentView.swift */,
 				7BAFAD60294F727D00B2C10E /* Assets.xcassets */,
@@ -129,6 +133,14 @@
 				7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */,
 			);
 			path = "alfred-managerUITests";
+			sourceTree = "<group>";
+		};
+		7BAFAD97294F7C8500B2C10E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +281,7 @@
 			files = (
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
+				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
