@@ -15,6 +15,9 @@
 		7BAFAD79294F727D00B2C10E /* alfred_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */; };
 		7BAFAD7B294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */; };
 		7BAFAD89294F753B00B2C10E /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFAD88294F753B00B2C10E /* Factory */; };
+		7BAFAD8E294F771300B2C10E /* InstallationSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD8D294F771300B2C10E /* InstallationSelectionViewModel.swift */; };
+		7BAFAD90294F771C00B2C10E /* InstallationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD8F294F771C00B2C10E /* InstallationSelectionView.swift */; };
+		7BAFAD92294F774500B2C10E /* InstallationSelectionDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD91294F774500B2C10E /* InstallationSelectionDependencies.swift */; };
 		7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */; };
 		7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */; };
 		7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C34294FB0C60022C944 /* SelectionView.swift */; };
@@ -49,6 +52,9 @@
 		7BAFAD74294F727D00B2C10E /* alfred-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alfred-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAFAD78294F727D00B2C10E /* alfred_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITests.swift; sourceTree = "<group>"; };
 		7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BAFAD8D294F771300B2C10E /* InstallationSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionViewModel.swift; sourceTree = "<group>"; };
+		7BAFAD8F294F771C00B2C10E /* InstallationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionView.swift; sourceTree = "<group>"; };
+		7BAFAD91294F774500B2C10E /* InstallationSelectionDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionDependencies.swift; sourceTree = "<group>"; };
 		7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolver.swift; sourceTree = "<group>"; };
 		7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7BF94C34294FB0C60022C944 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
@@ -144,9 +150,27 @@
 			isa = PBXGroup;
 			children = (
 				7BAFAD93294F788700B2C10E /* Filesystem */,
-				7BAFAD8B294F76D500B2C10E /* Export */,
+				7BAFAD8B294F76D500B2C10E /* InstallationSelection */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		7BAFAD8B294F76D500B2C10E /* InstallationSelection */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD8C294F76DD00B2C10E /* Views */,
+				7BAFAD8D294F771300B2C10E /* InstallationSelectionViewModel.swift */,
+				7BAFAD91294F774500B2C10E /* InstallationSelectionDependencies.swift */,
+			);
+			path = InstallationSelection;
+			sourceTree = "<group>";
+		};
+		7BAFAD8C294F76DD00B2C10E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFAD8F294F771C00B2C10E /* InstallationSelectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7BAFAD93294F788700B2C10E /* Filesystem */ = {
@@ -333,8 +357,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAFAD90294F771C00B2C10E /* InstallationSelectionView.swift in Sources */,
+				7BAFAD92294F774500B2C10E /* InstallationSelectionDependencies.swift in Sources */,
 				7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */,
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
+				7BAFAD8E294F771300B2C10E /* InstallationSelectionViewModel.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
