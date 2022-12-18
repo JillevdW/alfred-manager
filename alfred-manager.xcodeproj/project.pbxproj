@@ -17,6 +17,7 @@
 		7BAFAD89294F753B00B2C10E /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFAD88294F753B00B2C10E /* Factory */; };
 		7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */; };
 		7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */; };
+		7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C34294FB0C60022C944 /* SelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7BAFAD7A294F727D00B2C10E /* alfred_managerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alfred_managerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolver.swift; sourceTree = "<group>"; };
 		7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7BF94C34294FB0C60022C944 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7BAFAD97294F7C8500B2C10E /* Core */,
+				7BF94C32294FB07D0022C944 /* Shared */,
 				7BAFAD8A294F76BF00B2C10E /* Features */,
 				7BAFAD5C294F727C00B2C10E /* alfred_managerApp.swift */,
 				7BAFAD5E294F727C00B2C10E /* ContentView.swift */,
@@ -168,6 +171,30 @@
 				7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		7BF94C32294FB07D0022C944 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C33294FB0880022C944 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7BF94C33294FB0880022C944 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C36294FB6810022C944 /* SelectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7BF94C36294FB6810022C944 /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C34294FB0C60022C944 /* SelectionView.swift */,
+			);
+			path = SelectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +337,7 @@
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
+				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
