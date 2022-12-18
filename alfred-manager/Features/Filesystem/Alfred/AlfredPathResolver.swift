@@ -55,5 +55,14 @@ extension AlfredPathResolver {
     enum Error: Swift.Error {
         case applicationSupportDirectoryNotFound
         case alfredDirectoryNotFound
+        
+        var errorMessage: String {
+            switch self {
+            case .applicationSupportDirectoryNotFound:
+                return "No Alfred folder found. Are you sure you have Alfred installed?"
+            case .alfredDirectoryNotFound:
+                return "Application Support directory not found. Please submit a bug report."
+            }
+        }
     }
 }

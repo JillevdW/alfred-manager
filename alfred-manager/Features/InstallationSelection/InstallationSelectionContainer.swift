@@ -1,5 +1,5 @@
 //
-//  InstallationSelectionDependencies.swift
+//  InstallationSelectionContainer.swift
 //  alfred-manager
 //
 //  Created by Jille van der Weerd on 18/12/2022.

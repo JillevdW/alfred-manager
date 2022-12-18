@@ -9,7 +9,7 @@ import Foundation
 import Factory
 
 extension InstallationSelectionViewModel {
-    enum State {
+    enum State: Equatable {
         case loading
         case error(text: String)
         case done(paths: [URL])
@@ -27,7 +27,7 @@ class InstallationSelectionViewModel: ViewModel {
         case .success(let urls):
             state = .done(paths: urls)
         case .failure(let error):
-            state = .error(text: "\(error.localizedDescription)")
+            state = .error(text: error.errorMessage)
         }
     }
     
