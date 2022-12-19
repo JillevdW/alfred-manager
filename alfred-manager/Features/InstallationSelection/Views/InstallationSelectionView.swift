@@ -10,6 +10,7 @@ import SwiftUI
 struct InstallationSelectionView: View {
     @StateObject private var viewModel = InstallationSelectionViewModel()
     @State private var selection: URL?
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -36,6 +37,15 @@ struct InstallationSelectionView: View {
                 Text(text)
                     .foregroundColor(.red)
             }
+            
+            Button("Select") {
+                guard let selection = selection else {
+                    return
+                }
+                
+                viewModel.confirmAlfredPathSelection(url: selection)
+                dismiss()
+            }.disabled(selection == nil)
         }
     }
 }

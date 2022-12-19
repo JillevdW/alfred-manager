@@ -30,6 +30,10 @@
 		7BF94C45294FC1B40022C944 /* AlfredPathResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C44294FC1B40022C944 /* AlfredPathResolverTests.swift */; };
 		7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */; };
 		7BF94C4B294FC6000022C944 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C4A294FC6000022C944 /* FileManagerMock.swift */; };
+		7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C4D295101C50022C944 /* PreferencesManager.swift */; };
+		7BF94C4F295107480022C944 /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C4D295101C50022C944 /* PreferencesManager.swift */; };
+		7BF94C51295107830022C944 /* PreferencesManagingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C50295107830022C944 /* PreferencesManagingMock.swift */; };
+		7BF94C54295109B90022C944 /* PreferencesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C53295109B90022C944 /* PreferencesManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,9 @@
 		7BF94C44294FC1B40022C944 /* AlfredPathResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolverTests.swift; sourceTree = "<group>"; };
 		7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionContainerTests.swift; sourceTree = "<group>"; };
 		7BF94C4A294FC6000022C944 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		7BF94C4D295101C50022C944 /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
+		7BF94C50295107830022C944 /* PreferencesManagingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManagingMock.swift; sourceTree = "<group>"; };
+		7BF94C53295109B90022C944 /* PreferencesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +171,7 @@
 		7BAFAD8A294F76BF00B2C10E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7BF94C4C295101B80022C944 /* Storage */,
 				7BAFAD93294F788700B2C10E /* Filesystem */,
 				7BAFAD8B294F76D500B2C10E /* InstallationSelection */,
 			);
@@ -239,6 +247,7 @@
 		7BF94C37294FBBBC0022C944 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7BF94C52295109A80022C944 /* Storage */,
 				7BF94C42294FC19F0022C944 /* Filesystem */,
 				7BF94C38294FBBC30022C944 /* InstallationSelection */,
 			);
@@ -251,6 +260,7 @@
 				7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */,
 				7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */,
 				7BF94C48294FC1FE0022C944 /* InstallationSelectionContainerTests.swift */,
+				7BF94C50295107830022C944 /* PreferencesManagingMock.swift */,
 			);
 			path = InstallationSelection;
 			sourceTree = "<group>";
@@ -270,6 +280,22 @@
 				7BF94C4A294FC6000022C944 /* FileManagerMock.swift */,
 			);
 			path = Alfred;
+			sourceTree = "<group>";
+		};
+		7BF94C4C295101B80022C944 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C4D295101C50022C944 /* PreferencesManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		7BF94C52295109A80022C944 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7BF94C53295109B90022C944 /* PreferencesManagerTests.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +440,7 @@
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
 				7BAFAD8E294F771300B2C10E /* InstallationSelectionViewModel.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
+				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
 			);
@@ -426,12 +453,15 @@
 				7BF94C45294FC1B40022C944 /* AlfredPathResolverTests.swift in Sources */,
 				7BAFAD6F294F727D00B2C10E /* alfred_managerTests.swift in Sources */,
 				7BF94C3D294FBC440022C944 /* InstallationSelectionContainer.swift in Sources */,
+				7BF94C4F295107480022C944 /* PreferencesManager.swift in Sources */,
+				7BF94C54295109B90022C944 /* PreferencesManagerTests.swift in Sources */,
 				7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */,
 				7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */,
 				7BF94C3B294FBBDE0022C944 /* InstallationSelectionViewModel.swift in Sources */,
 				7BF94C3C294FBBE50022C944 /* ViewModel.swift in Sources */,
 				7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */,
 				7BF94C3A294FBBD90022C944 /* InstallationSelectionViewModelTests.swift in Sources */,
+				7BF94C51295107830022C944 /* PreferencesManagingMock.swift in Sources */,
 				7BF94C4B294FC6000022C944 /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

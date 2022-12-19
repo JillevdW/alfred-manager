@@ -7,6 +7,7 @@
 
 import Foundation
 import Factory
+import SwiftUI
 
 extension InstallationSelectionViewModel {
     enum State: Equatable {
@@ -18,9 +19,15 @@ extension InstallationSelectionViewModel {
 
 class InstallationSelectionViewModel: ViewModel {
     @Injected(InstallationSelectionContainer.alfredPathResolver) private var alfredPathResolver
+    @Injected(InstallationSelectionContainer.preferencesManager) private var preferencesManager
     @Published var state: State = .loading
 
     override func onCreate() {
+        super.onCreate()
+        loadAlfredURLs()
+    }
+    
+    private func loadAlfredURLs() {
         let result = alfredPathResolver.urls()
         
         switch result {
@@ -29,6 +36,10 @@ class InstallationSelectionViewModel: ViewModel {
         case .failure(let error):
             state = .error(text: error.errorMessage)
         }
+    }
+    
+    func confirmAlfredPathSelection(url: URL) {
+        preferencesManager.setAlfredInstallationPath(url)
     }
     
     // TODO: Recovery from errors can be achieved by allowing the user to manually select their Alfred directory.

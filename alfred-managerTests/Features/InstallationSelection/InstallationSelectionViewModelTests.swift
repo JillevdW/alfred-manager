@@ -49,11 +49,30 @@ final class InstallationSelectionViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.state, .error(text: expectedErrorMessage))
     }
     
+    func test_confirmAlfredPathSelection_storesSelectedURL() {
+        let preferencesManager = createAndRegisterPreferencesManagerMock()
+        let expectedURL = URL(string: "/test/url")!
+        var resultURL: URL?
+        preferencesManager.setAlfredInstallationPathHandler = { url in
+            resultURL = url
+        }
+        
+        let viewModel = InstallationSelectionViewModel()
+        viewModel.confirmAlfredPathSelection(url: expectedURL)
+        XCTAssertEqual(resultURL, expectedURL)
+    }
+    
     // MARK: - Private
     
     private func createAndRegisterPathResolverMock() -> AlfredPathResolvingMock {
         let alfredPathResolver = AlfredPathResolvingMock()
         InstallationSelectionContainer.alfredPathResolver.register { alfredPathResolver }
         return alfredPathResolver
+    }
+    
+    private func createAndRegisterPreferencesManagerMock() -> PreferencesManagingMock {
+        let preferencesManager = PreferencesManagingMock()
+        InstallationSelectionContainer.preferencesManager.register { preferencesManager }
+        return preferencesManager
     }
 }
