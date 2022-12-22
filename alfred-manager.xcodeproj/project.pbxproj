@@ -34,6 +34,10 @@
 		7BF94C4F295107480022C944 /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C4D295101C50022C944 /* PreferencesManager.swift */; };
 		7BF94C51295107830022C944 /* PreferencesManagingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C50295107830022C944 /* PreferencesManagingMock.swift */; };
 		7BF94C54295109B90022C944 /* PreferencesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C53295109B90022C944 /* PreferencesManagerTests.swift */; };
+		E10CA88B29520DBB007DD9B1 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88A29520DBB007DD9B1 /* RootViewModel.swift */; };
+		E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
+		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
+		E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,9 @@
 		7BF94C4D295101C50022C944 /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
 		7BF94C50295107830022C944 /* PreferencesManagingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManagingMock.swift; sourceTree = "<group>"; };
 		7BF94C53295109B90022C944 /* PreferencesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManagerTests.swift; sourceTree = "<group>"; };
+		E10CA88A29520DBB007DD9B1 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
+		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +137,7 @@
 		7BAFAD5B294F727C00B2C10E /* alfred-manager */ = {
 			isa = PBXGroup;
 			children = (
+				E10CA88929520DAC007DD9B1 /* RootView */,
 				7BAFAD97294F7C8500B2C10E /* Core */,
 				7BF94C32294FB07D0022C944 /* Shared */,
 				7BAFAD8A294F76BF00B2C10E /* Features */,
@@ -298,6 +306,16 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		E10CA88929520DAC007DD9B1 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				E10CA88A29520DBB007DD9B1 /* RootViewModel.swift */,
+				E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */,
+				E10CA88E29520DD9007DD9B1 /* RootView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,12 +452,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10CA88B29520DBB007DD9B1 /* RootViewModel.swift in Sources */,
 				7BAFAD90294F771C00B2C10E /* InstallationSelectionView.swift in Sources */,
 				7BAFAD92294F774500B2C10E /* InstallationSelectionContainer.swift in Sources */,
 				7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */,
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
+				E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */,
 				7BAFAD8E294F771300B2C10E /* InstallationSelectionViewModel.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
+				E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */,
 				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
@@ -458,6 +479,7 @@
 				7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */,
 				7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */,
 				7BF94C3B294FBBDE0022C944 /* InstallationSelectionViewModel.swift in Sources */,
+				E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */,
 				7BF94C3C294FBBE50022C944 /* ViewModel.swift in Sources */,
 				7BF94C49294FC1FE0022C944 /* InstallationSelectionContainerTests.swift in Sources */,
 				7BF94C3A294FBBD90022C944 /* InstallationSelectionViewModelTests.swift in Sources */,
@@ -614,7 +636,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -641,7 +663,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -665,7 +687,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -684,7 +706,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -702,7 +724,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";
@@ -719,7 +741,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = 9NM3A38RUD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";

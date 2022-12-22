@@ -11,5 +11,5 @@ import Factory
 class InstallationSelectionContainer: SharedContainer {
     static let fileManager = Factory<FileManager> { FileManager.default }
     static let alfredPathResolver = Factory<AlfredPathResolving> { AlfredPathResolver(fileManager: fileManager()) }
-    static let preferencesManager = Factory<PreferencesManaging> { PreferencesManager(userDefaults: .standard) }
+    static let preferencesManager = RootViewContainer.preferencesManager
 }
