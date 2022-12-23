@@ -20,6 +20,7 @@
 		7BAFAD92294F774500B2C10E /* InstallationSelectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD91294F774500B2C10E /* InstallationSelectionContainer.swift */; };
 		7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */; };
 		7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */; };
+		7BB240F429561C8200175C7A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB240F329561C8200175C7A /* OnboardingView.swift */; };
 		7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C34294FB0C60022C944 /* SelectionView.swift */; };
 		7BF94C3A294FBBD90022C944 /* InstallationSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */; };
 		7BF94C3B294FBBDE0022C944 /* InstallationSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFAD8D294F771300B2C10E /* InstallationSelectionViewModel.swift */; };
@@ -38,7 +39,7 @@
 		E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
 		E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
-		E1B001DA29560E0D00433AF6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingView.swift */; };
+		E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		7BAFAD91294F774500B2C10E /* InstallationSelectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionContainer.swift; sourceTree = "<group>"; };
 		7BAFAD95294F78CD00B2C10E /* AlfredPathResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolver.swift; sourceTree = "<group>"; };
 		7BAFAD98294F7C8E00B2C10E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7BB240F329561C8200175C7A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7BF94C34294FB0C60022C944 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		7BF94C39294FBBD90022C944 /* InstallationSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		7BF94C3F294FBCAB0022C944 /* AlfredPathResolvingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredPathResolvingMock.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		E10CA88A29520DBB007DD9B1 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
 		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		E1B001D929560E0D00433AF6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,7 +332,8 @@
 		E1B001D829560E0300433AF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1B001D929560E0D00433AF6 /* OnboardingView.swift */,
+				E1B001D929560E0D00433AF6 /* OnboardingModal.swift */,
+				7BB240F329561C8200175C7A /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -482,8 +485,9 @@
 				E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */,
 				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
-				E1B001DA29560E0D00433AF6 /* OnboardingView.swift in Sources */,
+				E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
+				7BB240F429561C8200175C7A /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +660,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -683,7 +687,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -707,7 +711,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -726,7 +730,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -744,7 +748,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";
@@ -761,7 +765,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NM3A38RUD;
+				DEVELOPMENT_TEAM = QVGYT9HZ7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";

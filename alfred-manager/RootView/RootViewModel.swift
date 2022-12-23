@@ -8,9 +8,17 @@
 import Foundation
 import Factory
 
+extension RootViewModel {
+    enum State {
+        case loading
+        case pathSelected
+        case pathNotSelected
+    }
+}
+
 class RootViewModel: ViewModel {
     @Injected(RootViewContainer.preferencesManager) var preferencesManager
-    @Published var alfredInstallationPathSelected = false
+    @Published var state: State = .loading
     
     override func onCreate() {
         super.onCreate()
@@ -18,7 +26,7 @@ class RootViewModel: ViewModel {
         preferencesManager.alfredInstallationPathStream
             .receive(on: DispatchQueue.main)
             .sink { [weak self] url in
-                self?.alfredInstallationPathSelected = url != nil
+                self?.state = url != nil ? .pathSelected : .pathNotSelected
             }.store(in: &lifecycle)
     }
 }

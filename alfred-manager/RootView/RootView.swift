@@ -11,11 +11,11 @@ struct RootView: View {
     @StateObject var rootViewModel = RootViewModel()
     
     var body: some View {
-        if rootViewModel.alfredInstallationPathSelected {
+        switch rootViewModel.state {
+        case .loading, .pathSelected:
             ContentView()
-        } else {
-            InstallationSelectionView()
-                .padding()
+        case .pathNotSelected:
+            OnboardingView()
         }
     }
 }
