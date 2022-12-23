@@ -38,6 +38,7 @@
 		E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
 		E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
+		E1B001DA29560E0D00433AF6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		E10CA88A29520DBB007DD9B1 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
 		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E1B001D929560E0D00433AF6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		7BAFAD8A294F76BF00B2C10E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B001D529560DDF00433AF6 /* Onboarding */,
 				7BF94C4C295101B80022C944 /* Storage */,
 				7BAFAD93294F788700B2C10E /* Filesystem */,
 				7BAFAD8B294F76D500B2C10E /* InstallationSelection */,
@@ -314,6 +317,22 @@
 				E10CA88E29520DD9007DD9B1 /* RootView.swift */,
 			);
 			path = RootView;
+			sourceTree = "<group>";
+		};
+		E1B001D529560DDF00433AF6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001D829560E0300433AF6 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E1B001D829560E0300433AF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001D929560E0D00433AF6 /* OnboardingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +482,7 @@
 				E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */,
 				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
+				E1B001DA29560E0D00433AF6 /* OnboardingView.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
