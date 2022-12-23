@@ -141,7 +141,6 @@
 		7BAFAD5B294F727C00B2C10E /* alfred-manager */ = {
 			isa = PBXGroup;
 			children = (
-				E10CA88929520DAC007DD9B1 /* RootView */,
 				7BAFAD97294F7C8500B2C10E /* Core */,
 				7BF94C32294FB07D0022C944 /* Shared */,
 				7BAFAD8A294F76BF00B2C10E /* Features */,
@@ -183,6 +182,7 @@
 		7BAFAD8A294F76BF00B2C10E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E10CA88929520DAC007DD9B1 /* RootView */,
 				E1B001D529560DDF00433AF6 /* Onboarding */,
 				7BF94C4C295101B80022C944 /* Storage */,
 				7BAFAD93294F788700B2C10E /* Filesystem */,
