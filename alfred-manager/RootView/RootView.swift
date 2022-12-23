@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct RootView: View {
+    @StateObject var rootViewModel = RootViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if rootViewModel.alfredInstallationPathSelected {
+            ContentView()
+        } else {
+            InstallationSelectionView()
+                .padding()
+        }
     }
 }
 
