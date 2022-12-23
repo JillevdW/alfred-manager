@@ -11,7 +11,16 @@ import SwiftUI
 struct alfred_managerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+        }
+        .commands {
+            #if DEBUG
+            CommandMenu("Developer Menu") {
+                Button("Clear Alfred Installation Path") {
+                    RootViewContainer.preferencesManager().setAlfredInstallationPath(nil)
+                }
+            }
+            #endif
         }
     }
 }
