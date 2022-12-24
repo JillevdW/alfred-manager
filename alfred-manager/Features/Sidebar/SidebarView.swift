@@ -7,15 +7,38 @@
 
 import SwiftUI
 
+extension SidebarView {
+    enum NavigationOption: Int, Hashable {
+        case webSearchExport
+        case webSearchImport
+        case workflows
+        case settings
+    }
+}
+
 struct SidebarView: View {
+    /// The currently selected sidebar navigation option. Persists across app launches.
+    @AppStorage("selectedNavigationOption") private var selectedNavigationOption: NavigationOption = .webSearchExport
     var body: some View {
         NavigationView {
-            List {
+            List(selection: $selectedNavigationOption) {
                 Section {
-                    NavigationLink {
-                        Text("Web Search")
+                    SidebarDisclosureRow {
+                        NavigationLink {
+                            WebSearchExportView()
+                        } label: {
+                            Label("Export", systemImage: "arrow.up.doc")
+                        }.tag(NavigationOption.webSearchExport)
+                        
+                        NavigationLink {
+                            Text("Import")
+                        } label: {
+                            Label("Import", systemImage: "arrow.down.doc")
+                        }.tag(NavigationOption.webSearchImport)
                     } label: {
                         Label("Web Search", systemImage: "magnifyingglass.circle")
+                    } canExpandAndCollapse: {
+                        selectedNavigationOption != .webSearchExport && selectedNavigationOption != .webSearchImport
                     }
                     
                     NavigationLink {
@@ -28,7 +51,9 @@ struct SidebarView: View {
                                 .font(.footnote)
                                 .layoutPriority(0)
                         }
-                    }.disabled(true)
+                    }
+                    .tag(NavigationOption.workflows)
+                    .disabled(true)
                 }
                 
                 Section {
@@ -36,7 +61,7 @@ struct SidebarView: View {
                         Text("Settings")
                     } label: {
                         Label("Settings", systemImage: "gear")
-                    }
+                    }.tag(NavigationOption.settings)
                 }
             }.listStyle(.sidebar)
         }.toolbar {

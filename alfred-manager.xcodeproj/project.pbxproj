@@ -42,6 +42,8 @@
 		E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingModal.swift */; };
 		E1B001DD2957143C00433AF6 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001DC2957143C00433AF6 /* SidebarView.swift */; };
 		E1B001E029571E2300433AF6 /* BadgeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001DF29571E2300433AF6 /* BadgeTextView.swift */; };
+		E1B001E52957269300433AF6 /* SidebarDisclosureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001E42957269300433AF6 /* SidebarDisclosureRow.swift */; };
+		E1B001E829572B2000433AF6 /* WebSearchExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001E729572B2000433AF6 /* WebSearchExportView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
 		E1B001DC2957143C00433AF6 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		E1B001DF29571E2300433AF6 /* BadgeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTextView.swift; sourceTree = "<group>"; };
+		E1B001E42957269300433AF6 /* SidebarDisclosureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarDisclosureRow.swift; sourceTree = "<group>"; };
+		E1B001E729572B2000433AF6 /* WebSearchExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchExportView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		7BAFAD8A294F76BF00B2C10E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B001E1295721BC00433AF6 /* WebSearch */,
 				E1B001DB2957143300433AF6 /* Sidebar */,
 				E10CA88929520DAC007DD9B1 /* RootView */,
 				E1B001D529560DDF00433AF6 /* Onboarding */,
@@ -348,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				E1B001DC2957143C00433AF6 /* SidebarView.swift */,
+				E1B001E42957269300433AF6 /* SidebarDisclosureRow.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -358,6 +364,22 @@
 				E1B001DF29571E2300433AF6 /* BadgeTextView.swift */,
 			);
 			path = Badge;
+			sourceTree = "<group>";
+		};
+		E1B001E1295721BC00433AF6 /* WebSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001E629572B0F00433AF6 /* Export */,
+			);
+			path = WebSearch;
+			sourceTree = "<group>";
+		};
+		E1B001E629572B0F00433AF6 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001E729572B2000433AF6 /* WebSearchExportView.swift */,
+			);
+			path = Export;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,7 +531,9 @@
 				E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */,
 				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
+				E1B001E52957269300433AF6 /* SidebarDisclosureRow.swift in Sources */,
 				E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */,
+				E1B001E829572B2000433AF6 /* WebSearchExportView.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
 				7BB240F429561C8200175C7A /* OnboardingView.swift in Sources */,
 			);
