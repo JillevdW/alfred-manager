@@ -13,7 +13,7 @@ struct RootView: View {
     var body: some View {
         switch rootViewModel.state {
         case .loading, .pathSelected:
-            ContentView()
+            SidebarView()
         case .pathNotSelected:
             OnboardingView()
         }

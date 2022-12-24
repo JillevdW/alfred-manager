@@ -40,6 +40,8 @@
 		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
 		E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingModal.swift */; };
+		E1B001DD2957143C00433AF6 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001DC2957143C00433AF6 /* SidebarView.swift */; };
+		E1B001E029571E2300433AF6 /* BadgeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001DF29571E2300433AF6 /* BadgeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
 		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
+		E1B001DC2957143C00433AF6 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		E1B001DF29571E2300433AF6 /* BadgeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 		7BAFAD8A294F76BF00B2C10E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E1B001DB2957143300433AF6 /* Sidebar */,
 				E10CA88929520DAC007DD9B1 /* RootView */,
 				E1B001D529560DDF00433AF6 /* Onboarding */,
 				7BF94C4C295101B80022C944 /* Storage */,
@@ -244,6 +249,7 @@
 		7BF94C33294FB0880022C944 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E1B001DE29571E1600433AF6 /* Badge */,
 				7BF94C36294FB6810022C944 /* SelectionView */,
 			);
 			path = Views;
@@ -336,6 +342,22 @@
 				7BB240F329561C8200175C7A /* OnboardingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1B001DB2957143300433AF6 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001DC2957143C00433AF6 /* SidebarView.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		E1B001DE29571E1600433AF6 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				E1B001DF29571E2300433AF6 /* BadgeTextView.swift */,
+			);
+			path = Badge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +497,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10CA88B29520DBB007DD9B1 /* RootViewModel.swift in Sources */,
+				E1B001E029571E2300433AF6 /* BadgeTextView.swift in Sources */,
 				7BAFAD90294F771C00B2C10E /* InstallationSelectionView.swift in Sources */,
+				E1B001DD2957143C00433AF6 /* SidebarView.swift in Sources */,
 				7BAFAD92294F774500B2C10E /* InstallationSelectionContainer.swift in Sources */,
 				7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */,
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
@@ -660,7 +684,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -687,7 +711,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"alfred-manager/Preview Content\"";
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -711,7 +735,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -730,7 +754,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
@@ -748,7 +772,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";
@@ -765,7 +789,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QVGYT9HZ7J;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jille.alfred-managerUITests";

@@ -1,7 +1,9 @@
 //
-//  Copyright © Uber Technologies, Inc. All rights reserved.
+//  OnboardingModal.swift
+//  alfred-manager
 //
-
+//  Created by Jille van der Weerd on 23/12/2022.
+//
 
 import SwiftUI
 
@@ -34,7 +36,6 @@ struct OnboardingModal: View {
                                headline: "Export everything",
                                subheadline: "Want to share workflows? Snippets? Anything you can think of that we can find in the preferences?",
                                headlineBadge: "Soon")
-                
             }.padding(.horizontal, 48)
             
             Button("Continue") {
@@ -64,14 +65,8 @@ struct OnboardingModal: View {
                         Text(headline)
                             .font(.headline)
                         
-                        Text(headlineBadge)
+                        BadgeTextView(text: headlineBadge)
                             .font(.footnote)
-                            .foregroundColor(Color(nsColor: .textBackgroundColor))
-                            .padding(.horizontal, 4)
-                            .padding(.vertical, 2)
-                            .background {
-                                RoundedRectangle(cornerRadius: 4).fill(.green)
-                            }
                     }
                 } else {
                     Text(headline)
