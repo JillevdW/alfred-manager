@@ -23,7 +23,7 @@ struct SidebarView: View {
         NavigationView {
             List(selection: $selectedNavigationOption) {
                 Section {
-                    SidebarDisclosureRow {
+                    SidebarDisclosureRow(isInitiallyExpanded: selectedNavigationOption == .webSearchExport || selectedNavigationOption == .webSearchImport) {
                         NavigationLink {
                             WebSearchExportView()
                         } label: {

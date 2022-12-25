@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// An expandable row to be displayed in the Application's sidebar. The row itself can not be selected,
+/// but the content provided through the `content` parameter can.
 struct SidebarDisclosureRow<Content: View, Label: View>: View {
     @ViewBuilder let content: () -> Content
     @ViewBuilder let label: () -> Label
@@ -15,13 +17,20 @@ struct SidebarDisclosureRow<Content: View, Label: View>: View {
     
     @State private var isExpanded: Bool
     
-    init(@ViewBuilder content: @escaping () -> Content,
+    /// - Parameters:
+    ///   - isInitiallyExpanded: sets the initial expanded/collapsed state.
+    ///   - content: The content that will be selectable in the Sidebar.
+    ///   - label: The label that will allow for expanding and collapsing the content.
+    ///   - canExpandAndCollapse: controls whether the row can be opened or closed,
+    ///   for example to disallow closing of the row when one of its children is selected.
+    init(isInitiallyExpanded: Bool = false,
+         @ViewBuilder content: @escaping () -> Content,
          @ViewBuilder label: @escaping () -> Label,
          canExpandAndCollapse: @escaping () -> Bool  = { true }) {
         self.content = content
         self.label = label
         self.canExpandAndCollapse = canExpandAndCollapse
-        _isExpanded = State(initialValue: !canExpandAndCollapse())
+        _isExpanded = State(initialValue: isInitiallyExpanded)
     }
     
     var body: some View {
@@ -55,6 +64,20 @@ struct SidebarDisclosureView_Previews: PreviewProvider {
             Text("Second item")
         } label: {
             Text("Disclosure Label")
-        }
+        }.previewDisplayName("Regular")
+        
+        SidebarDisclosureRow(isInitiallyExpanded: true) {
+            Text("First item")
+            Text("Second item")
+        } label: {
+            Text("Disclosure Label")
+        }.previewDisplayName("Initially expanded")
+
+        SidebarDisclosureRow(isInitiallyExpanded: true) {
+            Text("First item")
+            Text("Second item")
+        } label: {
+            Text("Disclosure Label")
+        }.previewDisplayName("Not collapsible")
     }
 }
