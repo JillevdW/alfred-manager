@@ -39,6 +39,7 @@
 		E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
 		E14E0195295887730090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
+		E14E019829588B0F0090EB9C /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */; };
 		E14E019929588B1D0090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
 		E1B001D42954F23100433AF6 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B001D929560E0D00433AF6 /* OnboardingModal.swift */; };
@@ -96,6 +97,7 @@
 		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
 		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E14E0194295887730090EB9C /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
+		E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
 		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
 		E1B001DC2957143C00433AF6 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		E1B001DF29571E2300433AF6 /* BadgeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTextView.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		7BF94C37294FBBBC0022C944 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E14E019629588AF60090EB9C /* Sidebar */,
 				7BF94C52295109A80022C944 /* Storage */,
 				7BF94C42294FC19F0022C944 /* Filesystem */,
 				7BF94C38294FBBC30022C944 /* InstallationSelection */,
@@ -333,6 +336,14 @@
 				E10CA88E29520DD9007DD9B1 /* RootView.swift */,
 			);
 			path = RootView;
+			sourceTree = "<group>";
+		};
+		E14E019629588AF60090EB9C /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */,
+			);
+			path = Sidebar;
 			sourceTree = "<group>";
 		};
 		E1B001D529560DDF00433AF6 /* Onboarding */ = {
@@ -554,6 +565,7 @@
 				7BF94C4F295107480022C944 /* PreferencesManager.swift in Sources */,
 				7BF94C54295109B90022C944 /* PreferencesManagerTests.swift in Sources */,
 				7BF94C3E294FBC4A0022C944 /* AlfredPathResolver.swift in Sources */,
+				E14E019829588B0F0090EB9C /* SidebarViewModelTests.swift in Sources */,
 				E14E019929588B1D0090EB9C /* SidebarViewModel.swift in Sources */,
 				7BF94C40294FBCAB0022C944 /* AlfredPathResolvingMock.swift in Sources */,
 				7BF94C3B294FBBDE0022C944 /* InstallationSelectionViewModel.swift in Sources */,

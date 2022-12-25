@@ -11,11 +11,13 @@ final class InstallationSelectionViewModelTests: XCTestCase {
 
     override class func setUp() {
         super.setUp()
+        RootViewContainer.Registrations.push()
         InstallationSelectionContainer.Registrations.push()
     }
     
     override class func tearDown() {
         super.tearDown()
+        RootViewContainer.Registrations.pop()
         InstallationSelectionContainer.Registrations.pop()
     }
 
@@ -72,7 +74,7 @@ final class InstallationSelectionViewModelTests: XCTestCase {
     
     private func createAndRegisterPreferencesManagerMock() -> PreferencesManagingMock {
         let preferencesManager = PreferencesManagingMock()
-        InstallationSelectionContainer.preferencesManager.register { preferencesManager }
+        RootViewContainer.preferencesManager.register { preferencesManager }
         return preferencesManager
     }
 }
