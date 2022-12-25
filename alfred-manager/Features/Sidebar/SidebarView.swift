@@ -7,38 +7,30 @@
 
 import SwiftUI
 
-extension SidebarView {
-    enum NavigationOption: Int, Hashable {
-        case webSearchExport
-        case webSearchImport
-        case workflows
-        case settings
-    }
-}
-
 struct SidebarView: View {
-    /// The currently selected sidebar navigation option. Persists across app launches.
-    @AppStorage("selectedNavigationOption") private var selectedNavigationOption: NavigationOption = .webSearchExport
+    @StateObject var viewModel = SidebarViewModel()
+    
     var body: some View {
         NavigationView {
-            List(selection: $selectedNavigationOption) {
+            List(selection: $viewModel.selectedNavigationOption) {
                 Section {
-                    SidebarDisclosureRow(isInitiallyExpanded: selectedNavigationOption == .webSearchExport || selectedNavigationOption == .webSearchImport) {
+                    SidebarDisclosureRow(
+                        isInitiallyExpanded: viewModel.isWebsearchRowInitiallyExpanded,
+                        canExpandAndCollapse: viewModel.canExpandAndCollapseWebsearchRow
+                    ) {
                         NavigationLink {
                             WebSearchExportView()
                         } label: {
                             Label("Export", systemImage: "arrow.up.doc")
-                        }.tag(NavigationOption.webSearchExport)
+                        }.tag(SidebarViewModel.NavigationOption.webSearchExport)
                         
                         NavigationLink {
                             Text("Import")
                         } label: {
                             Label("Import", systemImage: "arrow.down.doc")
-                        }.tag(NavigationOption.webSearchImport)
+                        }.tag(SidebarViewModel.NavigationOption.webSearchImport)
                     } label: {
                         Label("Web Search", systemImage: "magnifyingglass.circle")
-                    } canExpandAndCollapse: {
-                        selectedNavigationOption != .webSearchExport && selectedNavigationOption != .webSearchImport
                     }
                     
                     NavigationLink {
@@ -52,7 +44,7 @@ struct SidebarView: View {
                                 .layoutPriority(0)
                         }
                     }
-                    .tag(NavigationOption.workflows)
+                    .tag(SidebarViewModel.NavigationOption.workflows)
                     .disabled(true)
                 }
                 
@@ -61,7 +53,7 @@ struct SidebarView: View {
                         Text("Settings")
                     } label: {
                         Label("Settings", systemImage: "gear")
-                    }.tag(NavigationOption.settings)
+                    }.tag(SidebarViewModel.NavigationOption.settings)
                 }
             }.listStyle(.sidebar)
         }.toolbar {

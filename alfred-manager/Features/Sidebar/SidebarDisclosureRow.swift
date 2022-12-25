@@ -10,10 +10,10 @@ import SwiftUI
 /// An expandable row to be displayed in the Application's sidebar. The row itself can not be selected,
 /// but the content provided through the `content` parameter can.
 struct SidebarDisclosureRow<Content: View, Label: View>: View {
+    /// Denotes whether the disclosure group can be opened/closed.
+    let canExpandAndCollapse: Bool
     @ViewBuilder let content: () -> Content
     @ViewBuilder let label: () -> Label
-    /// Denotes whether the disclosure group can be opened/closed.
-    let canExpandAndCollapse: () -> Bool
     
     @State private var isExpanded: Bool
     
@@ -24,12 +24,12 @@ struct SidebarDisclosureRow<Content: View, Label: View>: View {
     ///   - canExpandAndCollapse: controls whether the row can be opened or closed,
     ///   for example to disallow closing of the row when one of its children is selected.
     init(isInitiallyExpanded: Bool = false,
+         canExpandAndCollapse: Bool = true,
          @ViewBuilder content: @escaping () -> Content,
-         @ViewBuilder label: @escaping () -> Label,
-         canExpandAndCollapse: @escaping () -> Bool  = { true }) {
+         @ViewBuilder label: @escaping () -> Label) {
+        self.canExpandAndCollapse = canExpandAndCollapse
         self.content = content
         self.label = label
-        self.canExpandAndCollapse = canExpandAndCollapse
         _isExpanded = State(initialValue: isInitiallyExpanded)
     }
     
@@ -43,7 +43,7 @@ struct SidebarDisclosureRow<Content: View, Label: View>: View {
                 .rotationEffect(Angle(degrees: isExpanded ? 90 : 0 ))
         }.onTapGesture {
             withAnimation {
-                guard canExpandAndCollapse() else {
+                guard canExpandAndCollapse else {
                     return
                 }
                 isExpanded.toggle()
@@ -73,7 +73,8 @@ struct SidebarDisclosureView_Previews: PreviewProvider {
             Text("Disclosure Label")
         }.previewDisplayName("Initially expanded")
 
-        SidebarDisclosureRow(isInitiallyExpanded: true) {
+        SidebarDisclosureRow(isInitiallyExpanded: true,
+                             canExpandAndCollapse: false) {
             Text("First item")
             Text("Second item")
         } label: {
