@@ -67,29 +67,29 @@ fileprivate struct InternalSelectionView<Element: Hashable>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ForEach(items, id: \.self) { item in
-                ZStack {
-                    Button {
-                        onSelected(item)
-                    } label: {
-                        HStack(spacing: 12) {
-                            Image(systemName: isSelected(item) ? "checkmark.circle.fill" : "circle")
-                                .resizable()
-                                .frame(width: 16, height: 16)
-                                .foregroundColor(.blue)
-                            VStack(alignment: .leading) {
-                                Text(titleLabel(item))
-                                    .font(.headline)
-                                
-                                if let subtitle = subtitleLabel?(item) {
-                                    Text(subtitle)
-                                        .font(.subheadline)
-                                }
+                Button {
+                    onSelected(item)
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(systemName: isSelected(item) ? "checkmark.circle.fill" : "circle")
+                            .resizable()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(.blue)
+                        VStack(alignment: .leading) {
+                            Text(titleLabel(item))
+                                .font(.headline)
+                            
+                            if let subtitle = subtitleLabel?(item) {
+                                Text(subtitle)
+                                    .font(.subheadline)
                             }
-                            Spacer()
-                        }.frame(maxWidth: .infinity)
-                        .contentShape(Rectangle())
-                    }.buttonStyle(.plain)
-                }.padding()
+                        }
+                        Spacer()
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
+                }.buttonStyle(.plain)
                 .background(
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
