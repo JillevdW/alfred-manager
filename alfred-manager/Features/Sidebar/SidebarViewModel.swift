@@ -1,7 +1,9 @@
 //
-//  Copyright © Uber Technologies, Inc. All rights reserved.
+//  SidebarViewModel.swift
+//  alfred-manager
 //
-
+//  Created by Jille van der Weerd on 24/12/2022.
+//
 
 import Foundation
 import SwiftUI

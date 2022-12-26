@@ -1,7 +1,9 @@
 //
-//  Copyright © Uber Technologies, Inc. All rights reserved.
+//  SidebarViewModelTests.swift
+//  alfred-manager
 //
-
+//  Created by Jille van der Weerd on 25/12/2022.
+//
 
 import XCTest
 
