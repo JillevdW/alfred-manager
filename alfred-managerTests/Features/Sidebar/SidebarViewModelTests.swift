@@ -14,10 +14,6 @@ final class SidebarViewModelTests: XCTestCase {
         userDefaults.setAnyHandler = { _, _ in }
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func test_selectedNavigationOption_storedInUserDefaults_usingCorrectKey() {
         let expectedKey = "selectedNavigationOption"
         var resultKey: String?
@@ -63,6 +59,17 @@ final class SidebarViewModelTests: XCTestCase {
         
         viewModel.selectedNavigationOption = .webSearchImport
         XCTAssertFalse(viewModel.canExpandAndCollapseWebsearchRow)
+    }
+    
+    func test_viewModelInit_resetsNavigationOptionToDefault_whenDisabledOptionPersisted() {
+        UserDefaults().removePersistentDomain(forName: "test-suite-name")
+        let userDefaults = UserDefaults(suiteName: "test-suite-name")!
+        userDefaults.set(SidebarViewModel.NavigationOption.workflows.rawValue, forKey: "selectedNavigationOption")
+        
+        let viewModel = SidebarViewModel(userDefaults: userDefaults)
+        
+        let defaultNavigationOption = SidebarViewModel.NavigationOption.webSearchExport
+        XCTAssertEqual(viewModel.selectedNavigationOption, defaultNavigationOption)
     }
 }
 

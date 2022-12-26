@@ -19,8 +19,22 @@ class SidebarViewModel: ViewModel {
     /// The currently selected sidebar navigation option. Persists across app launches.
     @AppStorage var selectedNavigationOption: NavigationOption
     
+    private let defaultNavigationOption: NavigationOption = .webSearchExport
+    private let selectedNavigationOptionUserDefaultsKey = "selectedNavigationOption"
+    private let disabledNavigationOptions: Set<NavigationOption> = [
+        .workflows
+    ]
+    
     init(userDefaults: UserDefaults = .standard) {
-        _selectedNavigationOption = AppStorage(wrappedValue: .webSearchExport, "selectedNavigationOption", store: userDefaults)
+        if let persistedOption = userDefaults.object(forKey: selectedNavigationOptionUserDefaultsKey),
+           let persistedRawValue = persistedOption as? Int,
+           disabledNavigationOptions.contains(where: { $0.rawValue == persistedRawValue }) {
+            userDefaults.set(defaultNavigationOption.rawValue, forKey: selectedNavigationOptionUserDefaultsKey)
+        }
+        
+        _selectedNavigationOption = AppStorage(wrappedValue: defaultNavigationOption,
+                                               selectedNavigationOptionUserDefaultsKey,
+                                               store: userDefaults)
     }
     
     // MARK: - Websearch Row
