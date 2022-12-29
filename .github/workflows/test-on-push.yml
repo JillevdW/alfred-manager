@@ -3,7 +3,7 @@ run-name: Testing ${{ github.ref_name }} branch sha ${{ github.sha }}
 on: [push]
 jobs:
   test-on-push:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
       - uses: swift-actions/setup-swift@8bc39f890ba929564c933215f068ad4f708a947c
         with:
