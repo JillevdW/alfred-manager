@@ -19,11 +19,31 @@ class WebSearchImportViewModel: ViewModel {
         
         $isShowingSelectionScreen
             .removeDuplicates()
-            .filter { isShowingSelectionScreen in !isShowingSelectionScreen }
             .sink { [weak self] isShowingSelectionScreen in
-                self?.resetWebSearchSelection()
+                if !isShowingSelectionScreen {
+                    self?.resetWebSearchSelection()
+                }
             }.store(in: &lifecycle)
     }
+    
+    // MARK: - Public API
+    
+    func selectConfigurationPath() {
+        guard let url = configurationPathFromOpenPanel(),
+              let data = try? Data.init(contentsOf: url) else {
+            // TODO: Error state.
+            return
+        }
+        
+        guard let webSearches = decodeWebSearches(from: data) else {
+            // TODO: Error state.
+            return
+        }
+        
+        presentWebSearchSelection(webSearches: webSearches)
+    }
+    
+    // MARK: - WebSearch Selection
     
     var isSelectionEmpty: Bool {
         selection.isEmpty
@@ -37,7 +57,29 @@ class WebSearchImportViewModel: ViewModel {
         }
     }
     
-    // MARK: - Private
+    // MARK: - Private Config selection
+    
+    private func configurationPathFromOpenPanel() -> URL? {
+        let panel = NSOpenPanel()
+        panel.directoryURL = .downloadsDirectory
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+        panel.canChooseFiles = true
+        panel.treatsFilePackagesAsDirectories = true
+        if panel.runModal() == .OK {
+            return panel.url
+        } else {
+            // TODO: Handle error cases.
+            return nil
+        }
+    }
+    
+    private func decodeWebSearches(from data: Data) -> [WebSearch]? {
+        let decoder = PropertyListDecoder()
+        return try? decoder.decode([WebSearch].self, from: data)
+    }
+    
+    // MARK: - Private WebSearch Selection
     
     private func presentWebSearchSelection(webSearches: [WebSearch]) {
         self.webSearches = webSearches
@@ -68,9 +110,8 @@ extension WebSearchImportViewModel: DropDelegate {
                 return
             }
             
-            let decoder = PropertyListDecoder()
-            guard let webSearches = try? decoder.decode([WebSearch].self, from: data) else {
-                // TODO: Decoding error.
+            guard let webSearches = self?.decodeWebSearches(from: data) else {
+                // TODO: Error.
                 return
             }
             

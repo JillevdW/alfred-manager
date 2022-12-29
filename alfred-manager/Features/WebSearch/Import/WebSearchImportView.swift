@@ -39,7 +39,7 @@ struct WebSearchImportView: View {
             }.padding(.bottom)
             
             Button {
-                // TODO: Open path.
+                viewModel.selectConfigurationPath()
             } label: {
                 TextField("Click here to select /path/to/configuration-to-import", text: .constant(""))
                     .disabled(true)
