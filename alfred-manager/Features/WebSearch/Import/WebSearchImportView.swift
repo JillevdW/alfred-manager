@@ -76,7 +76,7 @@ struct WebSearchImportView: View {
                         .fixedSize(horizontal: true, vertical: false)
                     
                     Button("Import selection", action: {
-                        // TODO: .
+                        viewModel.importSelection()
                     }).buttonStyle(.borderedProminent)
                         .disabled(viewModel.isSelectionEmpty)
                 }.padding()

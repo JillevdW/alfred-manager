@@ -7,8 +7,19 @@
 
 import Foundation
 import SwiftUI
+import Factory
+import Cocoa
+
+extension WebSearchImportViewModel {
+    enum StatusMessage {
+        case error(LocalizedStringKey)
+        case success(LocalizedStringKey)
+    }
+}
 
 class WebSearchImportViewModel: ViewModel {
+    @Injected(RootViewContainer.preferencesManager) private var preferencesManager
+    
     @Published private (set) var isDropItemWithinBounds = false
     @Published private (set) var webSearches: [WebSearch] = []
     @Published var selection: [WebSearch] = []
@@ -41,6 +52,38 @@ class WebSearchImportViewModel: ViewModel {
         }
         
         presentWebSearchSelection(webSearches: webSearches)
+    }
+    
+    func importSelection() {
+        guard let webSearchPreferences = loadCurrentPreferences() else {
+            // TODO: Error.
+            return
+        }
+        
+        var customSites = webSearchPreferences.customSites
+        
+        selection.forEach { webSearch in
+            customSites[UUID().uuidString] = webSearch
+        }
+        
+        let newWebSearchPrefs = WebSearchPrefs(customSites: customSites)
+        
+        let encoder = PropertyListEncoder()
+        encoder.outputFormat = .xml
+        guard let exportLocation = webSearchPath,
+              let data = try? encoder.encode(newWebSearchPrefs) else {
+            // TODO: Error.
+            return
+        }
+
+        do {
+            try data.write(to: exportLocation)
+            showSuccessStatusMessage()
+            resetWebSearchSelection()
+        } catch {
+            // TODO: Error.
+            print(error)
+        }
     }
     
     // MARK: - WebSearch Selection
@@ -89,6 +132,43 @@ class WebSearchImportViewModel: ViewModel {
     private func resetWebSearchSelection() {
         self.webSearches = []
         self.selection = []
+        self.isShowingSelectionScreen = false
+    }
+    
+    // MARK: - Private Current Websearch loading
+    
+    private func loadCurrentPreferences() -> WebSearchPrefs? {
+        guard let webSearchPath = webSearchPath else {
+            return nil
+        }
+        
+        let decoder = PropertyListDecoder()
+        guard let data = try? Data.init(contentsOf: webSearchPath) else {
+            return nil
+        }
+        
+        return try? decoder.decode(WebSearchPrefs.self, from: data)
+    }
+    
+    private var webSearchPath: URL? {
+        preferencesManager.alfredInstallationPath?
+            .appendingPathComponent("Alfred.alfredpreferences", conformingTo: .folder)
+            .appendingPathComponent("preferences", conformingTo: .folder)
+            .appendingPathComponent("features", conformingTo: .folder)
+            .appendingPathComponent("websearch", conformingTo: .folder)
+            .appendingPathComponent("prefs", conformingTo: .propertyList)
+    }
+    
+    private func showSuccessStatusMessage() {
+        let text: String
+        if selection.count == 1 {
+            text = "Successfully imported 1 Web Search."
+        } else {
+            text = "Successfully imported \(selection.count) Web Searches."
+        }
+        let alert = NSAlert()
+        alert.messageText = text
+        alert.runModal()
     }
 }
 
