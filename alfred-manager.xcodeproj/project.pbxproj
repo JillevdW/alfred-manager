@@ -39,6 +39,9 @@
 		E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */; };
 		E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CA88E29520DD9007DD9B1 /* RootView.swift */; };
 		E10CBC422959A97F00921E2C /* WebSearchExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC412959A97F00921E2C /* WebSearchExportViewModel.swift */; };
+		E10CBC452959D14D00921E2C /* WebSearchImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */; };
+		E10CBC472959D16300921E2C /* WebSearchImportDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */; };
+		E10CBC492959D5F000921E2C /* WebSearchImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC482959D5F000921E2C /* WebSearchImportView.swift */; };
 		E14E0195295887730090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
 		E14E019829588B0F0090EB9C /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */; };
 		E14E019929588B1D0090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
@@ -98,6 +101,9 @@
 		E10CA88C29520DD2007DD9B1 /* RootViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContainer.swift; sourceTree = "<group>"; };
 		E10CA88E29520DD9007DD9B1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E10CBC412959A97F00921E2C /* WebSearchExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchExportViewModel.swift; sourceTree = "<group>"; };
+		E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportViewModel.swift; sourceTree = "<group>"; };
+		E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportDropView.swift; sourceTree = "<group>"; };
+		E10CBC482959D5F000921E2C /* WebSearchImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportView.swift; sourceTree = "<group>"; };
 		E14E0194295887730090EB9C /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
 		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
@@ -340,6 +346,16 @@
 			path = RootView;
 			sourceTree = "<group>";
 		};
+		E10CBC432959D13600921E2C /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */,
+				E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */,
+				E10CBC482959D5F000921E2C /* WebSearchImportView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
 		E14E019629588AF60090EB9C /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +402,7 @@
 		E1B001E1295721BC00433AF6 /* WebSearch */ = {
 			isa = PBXGroup;
 			children = (
+				E10CBC432959D13600921E2C /* Import */,
 				E1B001E629572B0F00433AF6 /* Export */,
 			);
 			path = WebSearch;
@@ -541,6 +558,7 @@
 				7BAFAD90294F771C00B2C10E /* InstallationSelectionView.swift in Sources */,
 				E1B001DD2957143C00433AF6 /* SidebarView.swift in Sources */,
 				7BAFAD92294F774500B2C10E /* InstallationSelectionContainer.swift in Sources */,
+				E10CBC472959D16300921E2C /* WebSearchImportDropView.swift in Sources */,
 				7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */,
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
 				E10CBC422959A97F00921E2C /* WebSearchExportViewModel.swift in Sources */,
@@ -549,10 +567,12 @@
 				E14E0195295887730090EB9C /* SidebarViewModel.swift in Sources */,
 				7BAFAD5D294F727C00B2C10E /* alfred_managerApp.swift in Sources */,
 				E10CA88F29520DD9007DD9B1 /* RootView.swift in Sources */,
+				E10CBC452959D14D00921E2C /* WebSearchImportViewModel.swift in Sources */,
 				7BF94C4E295101C50022C944 /* PreferencesManager.swift in Sources */,
 				7BAFAD99294F7C8E00B2C10E /* ViewModel.swift in Sources */,
 				E1B001E52957269300433AF6 /* SidebarDisclosureRow.swift in Sources */,
 				E1B001DA29560E0D00433AF6 /* OnboardingModal.swift in Sources */,
+				E10CBC492959D5F000921E2C /* WebSearchImportView.swift in Sources */,
 				E1B001E829572B2000433AF6 /* WebSearchExportView.swift in Sources */,
 				7BF94C35294FB0C60022C944 /* SelectionView.swift in Sources */,
 				7BB240F429561C8200175C7A /* OnboardingView.swift in Sources */,

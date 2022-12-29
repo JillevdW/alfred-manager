@@ -25,7 +25,7 @@ struct SidebarView: View {
                         }.tag(SidebarViewModel.NavigationOption.webSearchExport)
                         
                         NavigationLink {
-                            Text("Import")
+                            WebSearchImportView()
                         } label: {
                             Label("Import", systemImage: "arrow.down.doc")
                         }.tag(SidebarViewModel.NavigationOption.webSearchImport)
