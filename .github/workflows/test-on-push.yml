@@ -1,0 +1,15 @@
+name: test-on-push
+run-name: Testing ${{ github.ref_name }} branch sha ${{ github.sha }}
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: macos-latest
+    steps:
+      - uses: fwal/setup-swift@2040b795e5c453c3a05fcb8316496afc8a74f192
+        with:
+          swift-version: "5.7"
+      - uses: actions/checkout@v3
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_14.1.0.app && /usr/bin/xcodebuild -version
+      - name: Run unit tests
+        run: xcodebuild test -scheme alfred-manager -project alfred-manager.xcodeproj -destination 'platform=macOS'
