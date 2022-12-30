@@ -14,6 +14,7 @@ jobs:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
           P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
           BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
+          PROVISION_PROFILE_ID: ${{ secrets.PROVISION_PROFILE_ID }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
           # create variables
@@ -40,7 +41,7 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_14.1.0.app && /usr/bin/xcodebuild -version
       - name: Run unit tests
-        run: xcodebuild test -scheme alfred-manager -project alfred-manager.xcodeproj -destination 'platform=macOS'
+        run: xcodebuild test -scheme alfred-manager -project alfred-manager.xcodeproj -destination 'platform=macOS' PROVISIONING_PROFILE="$PROVISION_PROFILE_ID"
       - name: Clean up keychain and provisioning profile
         if: ${{ always() }}
         run: |
