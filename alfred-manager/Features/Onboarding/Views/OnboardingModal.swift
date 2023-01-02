@@ -28,9 +28,10 @@ struct OnboardingModal: View {
                                headline: "Get new shortcuts",
                                subheadline: "Import shortcuts that someone else shared with you or download them from the internet.")
                 
-                onboardingItem(systemImage: "externaldrive.badge.timemachine",
-                               headline: "Backup your preferences",
-                               subheadline: "Backing up could be a use-case for Alfred Manager. But simply storing the Alfred preferences in GDrive works for that too 🤷")
+                onboardingItem(systemImage: "map",
+                               headline: "Discover",
+                               subheadline: "Discover curated Alfred shortcuts, the crème de la crème if you will :)",
+                               headlineBadge: "Soon")
                 
                 onboardingItem(systemImage: "globe",
                                headline: "Export everything",
