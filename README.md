@@ -13,7 +13,7 @@
     <a href="#contributing">Contributing</a> •
 </p>
 
-![screenshot](https://raw.githubusercontent.com/JillevdW/alfred-manager/master/header_image.png)
+![screenshot](https://raw.githubusercontent.com/JillevdW/alfred-manager/main/header_screenshot.png)
 
 ## Key Features
 
