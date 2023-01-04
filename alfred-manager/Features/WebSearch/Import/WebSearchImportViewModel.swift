@@ -19,6 +19,7 @@ extension WebSearchImportViewModel {
 
 class WebSearchImportViewModel: ViewModel {
     @Injected(RootViewContainer.preferencesManager) private var preferencesManager
+    @Injected(WebSearchImportContainer.logger) private var logger
     
     @Published private (set) var isDropItemWithinBounds = false
     @Published private (set) var webSearches: [WebSearch] = []
@@ -56,7 +57,7 @@ class WebSearchImportViewModel: ViewModel {
     
     func importSelection() {
         guard let webSearchPreferences = loadCurrentPreferences() else {
-            // TODO: Error.
+            logger.error("Error when importing selection: current preferences could not be loaded.")
             return
         }
         
@@ -70,19 +71,19 @@ class WebSearchImportViewModel: ViewModel {
         
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .xml
-        guard let exportLocation = webSearchPath,
-              let data = try? encoder.encode(newWebSearchPrefs) else {
-            // TODO: Error.
+        guard let exportLocation = webSearchPath else {
+            logger.error("Error when importing selection: webSearchPath is nil.")
             return
         }
 
         do {
+            let data = try encoder.encode(newWebSearchPrefs)
             try data.write(to: exportLocation)
             showSuccessStatusMessage()
             resetWebSearchSelection()
         } catch {
-            // TODO: Error.
-            print(error)
+            logger.error("Error when importing selection: \(error.localizedDescription, privacy: .public)")
+            showErrorStatusMessage(error: error)
         }
     }
     
@@ -139,15 +140,18 @@ class WebSearchImportViewModel: ViewModel {
     
     private func loadCurrentPreferences() -> WebSearchPrefs? {
         guard let webSearchPath = webSearchPath else {
+            logger.error("Error when loading current preferences: webSearchPath is nil.")
             return nil
         }
         
         let decoder = PropertyListDecoder()
-        guard let data = try? Data.init(contentsOf: webSearchPath) else {
+        do {
+            let data = try Data.init(contentsOf: webSearchPath)
+            return try decoder.decode(WebSearchPrefs.self, from: data)
+        } catch {
+            logger.error("Error when loading current preferences: \(error.localizedDescription, privacy: .public)")
             return nil
         }
-        
-        return try? decoder.decode(WebSearchPrefs.self, from: data)
     }
     
     private var webSearchPath: URL? {
@@ -165,6 +169,18 @@ class WebSearchImportViewModel: ViewModel {
             text = "Successfully imported 1 Web Search."
         } else {
             text = "Successfully imported \(selection.count) Web Searches."
+        }
+        let alert = NSAlert()
+        alert.messageText = text
+        alert.runModal()
+    }
+    
+    private func showErrorStatusMessage(error: Error?) {
+        let text: String
+        if let error {
+            text = "Something went wrong: \(error.localizedDescription)"
+        } else {
+            text = "Something went wrong."
         }
         let alert = NSAlert()
         alert.messageText = text

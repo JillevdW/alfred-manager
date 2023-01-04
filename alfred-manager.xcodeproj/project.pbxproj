@@ -42,6 +42,8 @@
 		E10CBC452959D14D00921E2C /* WebSearchImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */; };
 		E10CBC472959D16300921E2C /* WebSearchImportDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */; };
 		E10CBC492959D5F000921E2C /* WebSearchImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CBC482959D5F000921E2C /* WebSearchImportView.swift */; };
+		E1158F462965DD4A00C7659C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1158F452965DD4A00C7659C /* Logger.swift */; };
+		E1158F482965DE2200C7659C /* WebSearchImportContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1158F472965DE2200C7659C /* WebSearchImportContainer.swift */; };
 		E14E0195295887730090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
 		E14E019829588B0F0090EB9C /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */; };
 		E14E019929588B1D0090EB9C /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E0194295887730090EB9C /* SidebarViewModel.swift */; };
@@ -104,6 +106,8 @@
 		E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportViewModel.swift; sourceTree = "<group>"; };
 		E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportDropView.swift; sourceTree = "<group>"; };
 		E10CBC482959D5F000921E2C /* WebSearchImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportView.swift; sourceTree = "<group>"; };
+		E1158F452965DD4A00C7659C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E1158F472965DE2200C7659C /* WebSearchImportContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchImportContainer.swift; sourceTree = "<group>"; };
 		E14E0194295887730090EB9C /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		E14E019729588B0F0090EB9C /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
 		E1B001D929560E0D00433AF6 /* OnboardingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModal.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		7BF94C32294FB07D0022C944 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E1158F442965DD3800C7659C /* Extensions */,
 				7BF94C33294FB0880022C944 /* Views */,
 			);
 			path = Shared;
@@ -352,8 +357,17 @@
 				E10CBC442959D14D00921E2C /* WebSearchImportViewModel.swift */,
 				E10CBC462959D16300921E2C /* WebSearchImportDropView.swift */,
 				E10CBC482959D5F000921E2C /* WebSearchImportView.swift */,
+				E1158F472965DE2200C7659C /* WebSearchImportContainer.swift */,
 			);
 			path = Import;
+			sourceTree = "<group>";
+		};
+		E1158F442965DD3800C7659C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1158F452965DD4A00C7659C /* Logger.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E14E019629588AF60090EB9C /* Sidebar */ = {
@@ -559,7 +573,9 @@
 				E1B001DD2957143C00433AF6 /* SidebarView.swift in Sources */,
 				7BAFAD92294F774500B2C10E /* InstallationSelectionContainer.swift in Sources */,
 				E10CBC472959D16300921E2C /* WebSearchImportDropView.swift in Sources */,
+				E1158F482965DE2200C7659C /* WebSearchImportContainer.swift in Sources */,
 				7BAFAD96294F78CD00B2C10E /* AlfredPathResolver.swift in Sources */,
+				E1158F462965DD4A00C7659C /* Logger.swift in Sources */,
 				7BAFAD5F294F727C00B2C10E /* ContentView.swift in Sources */,
 				E10CBC422959A97F00921E2C /* WebSearchExportViewModel.swift in Sources */,
 				E10CA88D29520DD2007DD9B1 /* RootViewContainer.swift in Sources */,
