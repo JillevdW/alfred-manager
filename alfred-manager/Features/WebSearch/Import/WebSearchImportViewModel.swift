@@ -149,7 +149,16 @@ class WebSearchImportViewModel: ViewModel {
             let data = try Data.init(contentsOf: webSearchPath)
             return try decoder.decode(WebSearchPrefs.self, from: data)
         } catch {
-            logger.error("Error when loading current preferences: \(error.localizedDescription, privacy: .public)")
+            logger.error("Error when loading current preferences: \(error.localizedDescription, privacy: .public), NSErrorCode \((error as NSError).code, privacy: .public)")
+            
+            switch (error as NSError).code {
+            case NSFileNoSuchFileError, NSFileReadNoSuchFileError:
+                // When the file doesn't exist, return an empty WebSearchPrefs.
+                return WebSearchPrefs(customSites: [:])
+            default:
+                logger.error("Error when loading current preferences: error case not explicitly handled.")
+                break
+            }
             return nil
         }
     }
